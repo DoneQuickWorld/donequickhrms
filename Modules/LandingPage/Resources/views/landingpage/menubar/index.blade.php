@@ -72,8 +72,10 @@
                                     <div class="form-group">
                                         {{ Form::label('Site Logo', __('Site Logo'), ['class' => 'form-label']) }}
                                         <div class="logo-content mt-4">
-                                            <img id="image" src="{{ $logo . '/' . $settings['site_logo'] .'?'.time()}}"
-                                                class="big-logo" style="filter: drop-shadow(2px 3px 7px #011C4B); max-height:50px;">
+                                            <img id="image"
+                                                src="{{ $logo . '/' . $settings['site_logo'] . '?' . time() }}"
+                                                class="big-logo"
+                                                style="filter: drop-shadow(2px 3px 7px #011C4B); max-height:150px;">
                                         </div>
                                         <div class="choose-files mt-5">
                                             <label for="site_logo">
@@ -126,8 +128,8 @@
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-3 justify-content-end d-flex">
                                     <a data-size="lg" data-url="{{ route('custom_page.create') }}" data-ajax-popup="true"
-                                        data-bs-toggle="tooltip" title="{{ __('Create') }}" data-title="{{ __('Create Menu Bar') }}"
-                                        class="btn btn-sm btn-primary">
+                                        data-bs-toggle="tooltip" title="{{ __('Create') }}"
+                                        data-title="{{ __('Create Menu Bar') }}" class="btn btn-sm btn-primary">
                                         <i class="ti ti-plus text-light"></i>
                                     </a>
                                 </div>

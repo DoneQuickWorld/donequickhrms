@@ -19,7 +19,7 @@
 
     if ($language == 'ar' || $language == 'he') {
         $SITE_RTL = 'on';
-    }else {
+    } else {
         $SITE_RTL = 'off';
     }
 
@@ -124,7 +124,7 @@
                             <a href="#">
                                 <img src="{{ $logo . '/' . (isset($company_logo) && !empty($company_logo) ? $company_logo . '?' . time() : 'logo_dark.png' . '?' . time()) }}"
                                     class="logo" alt="{{ config('app.name', 'HRMGo SaaS') }}" alt="logo"
-                                    loading="lazy" style="max-height: 50px;"/>
+                                    loading="lazy" style="max-height: 157px;" />
                             </a>
                         </div>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

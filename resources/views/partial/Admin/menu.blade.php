@@ -1,12 +1,12 @@
 @php
-    
+
     $logo = \App\Models\Utility::get_file('uploads/logo/');
     $company_logo = \App\Models\Utility::GetLogo();
     $users = \Auth::user();
     $profile = \App\Models\Utility::get_file('uploads/avatar/');
     $currantLang = $users->currentLanguage();
     $emailTemplate = App\Models\EmailTemplate::getemailTemplate();
-    $lang= Auth::user()->lang;
+    $lang = Auth::user()->lang;
 @endphp
 
 @if (isset($setting['cust_theme_bg']) && $setting['cust_theme_bg'] == 'on')
@@ -22,7 +22,7 @@
         <a href="{{ route('dashboard') }}" class="b-brand">
             <!-- ========   change your logo hear   ============ -->
             <img src="{{ $logo . (isset($company_logo) && !empty($company_logo) ? $company_logo . '?' . time() : 'logo-dark.png' . '?' . time()) }}"
-                alt="{{ config('app.name', 'HRMGo') }}" class="logo logo-lg" style="height: 40px;">
+                alt="{{ config('app.name', 'HRMGo') }}" class="logo logo-lg" style="height: 157px;">
         </a>
     </div>
     <div class="navbar-content">
@@ -456,12 +456,14 @@
                                 data-feather="chevron-right"></i></span></a>
                     <ul class="dash-submenu">
                         @can('Manage Job')
-                            <li class="dash-item {{ Request::route()->getName() == 'job.index' ? 'active' : 'dash-hasmenu' }}">
+                            <li
+                                class="dash-item {{ Request::route()->getName() == 'job.index' ? 'active' : 'dash-hasmenu' }}">
                                 <a class="dash-link" href="{{ route('job.index') }}">{{ __('Jobs') }}</a>
                             </li>
                         @endcan
                         @can('Manage Job')
-                            <li class="dash-item {{ Request::route()->getName() == 'job.create' ? 'active' : 'dash-hasmenu' }}">
+                            <li
+                                class="dash-item {{ Request::route()->getName() == 'job.create' ? 'active' : 'dash-hasmenu' }}">
                                 <a class="dash-link" href="{{ route('job.create') }}">{{ __('Job Create ') }}</a>
                             </li>
                         @endcan
@@ -602,7 +604,8 @@
             @endif
 
             @if (\Auth::user()->type == 'company')
-                <li class="dash-item {{ Request::route()->getName() == 'notification-templates.update' || Request::segment(1) == 'notification-templates' ? 'active' : '' }}">
+                <li
+                    class="dash-item {{ Request::route()->getName() == 'notification-templates.update' || Request::segment(1) == 'notification-templates' ? 'active' : '' }}">
                     <a href="{{ route('notification-templates.index') }}" class="dash-link"><span
                             class="dash-micon"><i class="ti ti-bell"></i></span><span
                             class="dash-mtext">{{ __('Notification Template') }}</span></a>
