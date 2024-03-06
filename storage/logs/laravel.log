@@ -484,3 +484,31 @@ Stack trace:
 [stacktrace]
 #0 {main}
 "} 
+[2024-03-04 05:17:06] local.ERROR: Uncaught ReflectionException: Class "App\Http\Middleware\CheckPlan" does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionMethod->__construct('App\\Http\\Middle...', 'handle')
+#1 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class \"App\\Http\\Middleware\\CheckPlan\" does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionMethod->__construct('App\\\\Http\\\\Middle...', 'handle')
+#1 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-03-05 10:35:52] local.ERROR: Uncaught ReflectionException: Class "App\Http\Middleware\CheckPlan" does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionMethod->__construct('App\\Http\\Middle...', 'handle')
+#1 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class \"App\\Http\\Middleware\\CheckPlan\" does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionMethod->__construct('App\\\\Http\\\\Middle...', 'handle')
+#1 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-03-05 14:02:29] local.ERROR: Cannot declare class Chatify\Http\Controllers\Api\MessagesController, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class Chatify\\Http\\Controllers\\Api\\MessagesController, because the name is already in use at C:\\laragon\\www\\donquick_hrms\\app\\Http\\Controllers\\vendor\\Chatify\\Api\\MessagesController.php:18)
+[stacktrace]
+#0 {main}
+"} 
