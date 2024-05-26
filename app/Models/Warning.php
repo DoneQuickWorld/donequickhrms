@@ -29,4 +29,6 @@ class Warning extends Model
     {
         return Employee::where('id',$warningby)->first();
     }
+
+    
 }

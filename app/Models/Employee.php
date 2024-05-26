@@ -290,4 +290,5 @@ class Employee extends Model
             return $employee->salary;
         }
     }
+    
 }
